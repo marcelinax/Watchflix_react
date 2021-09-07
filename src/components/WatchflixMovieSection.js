@@ -1,12 +1,13 @@
 import React from 'react';
 import WatchflixTilesBox from './WatchflixTilesBox';
+import { Link } from 'react-router-dom';
 
 const WatchflixMovieSection = () => {
 	return (
 		<div className={'watchflix-movie-section'}>
 			<div className={'watchflix-movie-section-top'}>
-				<h1>Top Movies</h1>
-				<button>View More</button>
+				<h3>Top Movies</h3>
+				<Link to={''}>View More</Link>
 			</div>
 			<WatchflixTilesBox/>
 		</div>

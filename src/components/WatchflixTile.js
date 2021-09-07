@@ -19,8 +19,9 @@ const WatchflixTile = ({ isLarge }) => {
 							<i className="bx bx-show"></i>
 							<p>21.3K views</p>
 						</div>
-						<h1>Lo Lo Land</h1>
 					</div>
+					<h1>Lo Lo Land</h1>
+
 				</div>
 			</div>
 		</div>
