@@ -1,15 +1,8 @@
 import React from 'react';
+import parseDuration from '../utils/parseDuration';
 
 const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg }) => {
 
-	const parseDuration = () => {
-
-		if (duration >= 60) {
-			const hours = Math.floor(duration / 60);
-			const minutes = duration % 60;
-			return `${hours}hr ${minutes}mins`;
-		} else return `${duration}mins`;
-	};
 
 	const getGenre = () => {
 		return genre.split('/')[0];
@@ -28,7 +21,7 @@ const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg }) =
 					<div className={'watchflix-tile-bottom-info'}>
 						<div className={'watchflix-tile-bottom-info-item'}>
 							<i className="bx bx-time-five"></i>
-							<p>{parseDuration()}</p>
+							<p>{parseDuration(duration)}</p>
 						</div>
 						<div className={'watchflix-tile-bottom-info-item'}>
 							<i className="bx bx-show"></i>

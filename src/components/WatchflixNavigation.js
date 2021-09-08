@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const WatchflixNavigation = () => {
+
+	const [navigationClass, setNavigationClass] = useState('');
+
+	const updateNavigationClass = () => {
+		setNavigationClass(window.scrollY > 100 ? '#1E1E1E' : 'transparent');
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			updateNavigationClass();
+		});
+	}, []);
+
 	return (
-		<div className={'watchflix-navigation'}>
+		<div className={'watchflix-navigation'} style={{ backgroundColor: navigationClass }}>
 			<h4>Watchflix</h4>
 			<div className={'watchflix-navigation-box'}>
 				<Link>Home</Link>
