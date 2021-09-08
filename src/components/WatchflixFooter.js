@@ -50,7 +50,11 @@ const WatchflixFooter = () => {
 						<p>+271 386-647-3637</p>
 					</div>
 				</div>
+				<p className={'copyright'}>
+					© xmarcelinax
+				</p>
 			</div>
+
 		</div>
 	);
 };
