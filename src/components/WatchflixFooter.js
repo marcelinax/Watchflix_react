@@ -51,7 +51,7 @@ const WatchflixFooter = () => {
 					</div>
 				</div>
 				<p className={'copyright'}>
-					© xmarcelinax
+					© marcelinax
 				</p>
 			</div>
 
