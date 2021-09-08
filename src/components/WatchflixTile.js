@@ -3,9 +3,12 @@ import React from 'react';
 const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg }) => {
 
 	const parseDuration = () => {
-		const hours = Math.floor(duration / 60);
-		const minutes = duration % 60;
-		return `${hours}hr ${minutes}mins`;
+
+		if (duration >= 60) {
+			const hours = Math.floor(duration / 60);
+			const minutes = duration % 60;
+			return `${hours}hr ${minutes}mins`;
+		} else return `${duration}mins`;
 	};
 
 	const getGenre = () => {
