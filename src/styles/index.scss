@@ -45,6 +45,20 @@ h5 {
   line-height: 32px;
 }
 
+h6 {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 88px;
+  color: #FFFFFF;
+}
+
 i {
 
   font-size: 24px;
@@ -53,7 +67,7 @@ i {
 .watchflix-homepage {
   width: calc(100% - 700px);
   display: flex;
-  padding: 28px 350px;
+  padding: 28px 350px 0;
   background-color: #1E1E1E;
   flex-direction: column;
 
@@ -554,5 +568,144 @@ i {
         }
       }
     }
+  }
+}
+
+.watchflix-footer {
+  display: flex;
+  width: calc(100% + 700px);
+  position: relative;
+  left: -350px;
+  height: 560px;
+
+
+  &-left {
+    width: calc(560px - 180px);
+    padding: 90px;
+    background: #3D3D3D;
+    display: flex;
+    height: calc(100% - 180px);
+    flex-direction: column;
+
+    p {
+      line-height: 32px;
+      color: #E6E6E6;
+      margin-bottom: 40px;
+      margin-top: 32px;
+    }
+
+    &-newsletters {
+      &-box {
+        width: calc(282px - 32px);
+        height: calc(64px - 32px);
+        display: flex;
+        background: #525252;
+        border-radius: 8px;
+        justify-content: space-between;
+        padding: 16px 9px 16px 16px;
+        margin-top: 24px;
+        align-items: center;
+
+        input {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          color: #9A9AB0;
+          font-size: 16px;
+          line-height: 32px;
+
+          &::placeholder {
+            color: #9A9AB0;
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+
+        button {
+          background: #FED530;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          width: 48px;
+          height: 48px;
+
+          i {
+            font-size: 30px;
+          }
+        }
+
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    background: #2E2E2E;
+
+    width: 1160px;
+    padding: 133px 124px 112px 61px;
+
+    &-links-box {
+      display: flex;
+      margin-bottom: 99px;
+
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 190px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 32px;
+          color: #E6E6E6;
+          margin-bottom: 24px;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &-info-box {
+      display: flex;
+      width: 100%;
+
+      &-item {
+        display: flex;
+        margin-right: 54px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        p {
+          margin-left: 8px;
+          font-size: 14px;
+        }
+
+        i {
+          font-size: 24px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &-link-bold {
+    color: #FFFFFF;
+    font-weight: bold;
+
   }
 }
