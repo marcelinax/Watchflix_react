@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import parseDuration from '../utils/parseDuration';
+import ModalVideo from 'react-modal-video';
 
-const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg }) => {
-
+const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg, trailerUrl }) => {
+	const [isOpen, setOpen] = useState(false);
 
 	const getGenre = () => {
 		return genre.split('/')[0];
@@ -11,6 +12,10 @@ const WatchflixTile = ({ isLarge, genre, duration, popularity, title, bgImg }) =
 
 	return (
 		<div className={`watchflix-tile ${isLarge ? 'watchflix-tile-large' : ''}`} style={{ backgroundImage: `url(${bgImg})` }}>
+			<>
+				<ModalVideo channel="custom" autoplay isOpen={isOpen} url={trailerUrl} onClose={() => setOpen(false)}/>
+				<button className="btn-primary" onClick={() => setOpen(true)}><i className="bx bx-play"/></button>
+			</>
 			<div className={'watchflix-tile-box-shadow'}>
 				<div className={'watchflix-tile-top'}>
 					<div className={'watchflix-tile-top-category-box'}>

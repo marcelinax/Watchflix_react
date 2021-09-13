@@ -6,6 +6,7 @@ import WatchflixHomepageHeroTile from './WatchflixHomepageHeroTile';
 const WatchflixHomepageHero = () => {
 	const [heroMovie, setHeroMovie] = useState({});
 
+
 	const getHeroMovie = () => {
 		return axios.get('https://my-json-server.typicode.com/mvtthew/movies-db/hero').then(res => setHeroMovie(res.data));
 	};
@@ -39,10 +40,10 @@ const WatchflixHomepageHero = () => {
 			<div className={'watchflix-homepage-hero-bottom'}>
 				<h4>Trailers</h4>
 				<div className={'watchflix-homepage-hero-bottom-trailers-box'}>
-					<WatchflixHomepageHeroTile tileNumber={'01'} bgImg={heroMovie.thumbnailUrls[1]}/>
-					<WatchflixHomepageHeroTile tileNumber={'02'} bgImg={heroMovie.thumbnailUrls[2]}/>
-					<WatchflixHomepageHeroTile tileNumber={'03'} bgImg={heroMovie.thumbnailUrls[3]}/>
-					<WatchflixHomepageHeroTile tileNumber={'04'} bgImg={heroMovie.thumbnailUrls[4]}/>
+					<WatchflixHomepageHeroTile tileNumber={'01'} bgImg={heroMovie.thumbnailUrls[1]} trailerUrl={'Ab2YIbP5xw8'}/>
+					<WatchflixHomepageHeroTile tileNumber={'02'} bgImg={heroMovie.thumbnailUrls[2]} trailerUrl={'tjskecW2BFQ'}/>
+					<WatchflixHomepageHeroTile tileNumber={'03'} bgImg={heroMovie.thumbnailUrls[3]} trailerUrl={'FabgkDRdXSw'}/>
+					<WatchflixHomepageHeroTile tileNumber={'04'} bgImg={heroMovie.thumbnailUrls[4]} trailerUrl={'bPYnXiOVTvQ'}/>
 				</div>
 			</div>
 

@@ -3,6 +3,7 @@ import WatchflixHomepage from './components/WatchflixHomepage';
 import WatchflixNavigation from './components/WatchflixNavigation';
 
 function App() {
+
 	return (
 		<BrowserRouter>
 			<WatchflixNavigation/>
@@ -10,6 +11,7 @@ function App() {
 				<Route path={'/'} exact>
 					<WatchflixHomepage/>
 				</Route>
+
 			</Switch>
 		</BrowserRouter>
 	);

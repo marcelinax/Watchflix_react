@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import WatchflixVideoPlayerEpisodeTile from './WatchflixVideoPlayerEpisodeTile';
+import ModalVideo from 'react-modal-video';
 
 const WatchflixVideoPlayer = () => {
 
 	const [series, setSeries] = useState([]);
+	const [isOpen, setOpen] = useState(false);
 
 	const getSeries = () => {
 		return axios.get('https://my-json-server.typicode.com/marcelinax/Movies_db/series').then(res => setSeries(res.data));
@@ -20,9 +22,13 @@ const WatchflixVideoPlayer = () => {
 		series.length > 0 ? (<div className={'watchflix-video-player'}>
 			<div className={'watchflix-video-player-top'} style={{ backgroundImage: `url(${series[0].thumbnailUrl})` }}>
 				<div className={'watchflix-video-player-top-shadow-box'}>
-					<div className={'watchflix-video-player-button'}>
-						<i className="bx bx-play"></i>
-					</div>
+					<>
+						<ModalVideo channel="youtube" videoId={'X63OsUG-KCg'} autoplay isOpen={isOpen} onClose={() => setOpen(false)}/>
+						<div className={'watchflix-video-player-button'} onClick={() => setOpen(true)}>
+							<i className="bx bx-play"></i>
+						</div>
+					</>
+
 					<div className={'watchflix-video-player-top-info-box'}>
 						<h3>{series[0].title}</h3>
 						<p>{series[0].description}</p>
